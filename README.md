@@ -11,6 +11,23 @@ I implement a popup as UI Component. In this component, I load CSS asynchromousl
 
 Require-CSS can be got from here https://www.npmjs.com/package/require-css
 
+##### How to import into Magento2 frontend
+```
+var config = {
+    map: {
+        '*': {
+                
+                'css': 'Magenable_SubscriptionPopup/js/require-css/css' 
+            }
+        }
+};
+
+```
+##### How to call it :
+```
+require(['css!./'+ your_css_path  ], function(){}{ } )
+```
+
 ## 2. LESS Preprocessor - To inject/replace some code-lines/variables depends on Backend Configurations 
 
 ###### Due to get some Stylesheet variables from Magento configuration (likes background-color, text-color) to pass into a LESS file. I make a Less preprocessor(PHP code) to injected them.
