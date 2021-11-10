@@ -1,5 +1,5 @@
-# subscription_poup
-Magento2 - Simple Extension - Using Require-CSS and LESS Preproccessor 
+# Magento2 - Simple Extension - Using Require-CSS and LESS Preproccessor to approach Headless architect for CSS and avoid CSS inlines.  
+
 
 ## 1. Use Require-CSS to load CSS asynchromously for a specific UI component 
 
