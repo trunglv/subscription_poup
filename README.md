@@ -30,7 +30,7 @@ require(['css!./'+ your_css_path  ], function(){}{ } )
 
 ## 2. LESS Preprocessor - To inject/replace some code-lines/variables depends on Backend Configurations 
 
-###### Due to get some Stylesheet variables from Magento configuration (likes background-color, text-color) to pass into a LESS file. I make a Less preprocessor(PHP code) to injected them.
+###### Due to get some Stylesheet variables from Magento configuration (likes background-color, text-color) to pass into a LESS file. I make a Less preprocessor(PHP code) to inject them.
 See here : https://github.com/trunglv/subscription_poup/blob/main/SubscriptionPopup/Css/PreProcessor/Instruction/Variables.php#L32
 
 Define a new preproccessor from di.xml
