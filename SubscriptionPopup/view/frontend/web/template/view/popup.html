@@ -1,0 +1,29 @@
+<div class="subscription-popup-modal">
+    <span class="close">×</span>
+    <div class="content">
+        
+        <div class="title"><h2 data-bind="html: popup_header"> </h2></div>
+        <div class="main-content">
+            <div class="description" data-bind="html: popup_description">
+                   
+            </div>
+
+            <div class="subscribe-form">
+                <input class="email" name="subs-email" data-bind="value: email" />
+                <button class="subscribe-button" type="button" data-bind="click: subscribe">
+                    <span data-bind="i18n: 'Subscribe'"></span>
+                </button>
+                
+            </div>
+            <div class="messages">
+                <!-- ko foreach: { data: getSuccessMessages(), as: 'message' } -->
+                    <div class="success"><span data-bind="html: message"></span></div>
+                <!-- /ko -->
+                 <!-- ko foreach: { data: getErrorMessages(), as: 'message' } -->
+                    <div class="error" ><span data-bind="html: message"></span></div>
+                 <!-- /ko -->
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magenable" translate="label" sortOrder="300">             
+            <label><![CDATA[Magenable]]></label> 
+        </tab>
+        <section id="magenable_subscriptionpoupup" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label><![CDATA[Subscription Popup]]></label>
+            <tab>magenable</tab>
+            <resource>Magenable_SubscriptionPopup::magenable_subscriptionpoupup</resource>  
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                
+                <label><![CDATA[General Configuration]]></label>
+                
+                <field id="enable" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Enable]]></label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="popup_title" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Popup Title</label>
+                    <comment></comment>
+                </field>
+
+                <field id="popup_description" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Popup Description</label>
+                    <comment></comment>
+                </field>
+
+
+                <field id="button_background" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Button Background </label>
+                    <comment></comment>
+                </field>
+
+                <field id="button_color" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Button Color </label>
+                    <comment></comment>
+                </field>
+
+                <field id="popup_delay" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Popup Delay</label>
+                    <comment></comment>
+                </field>
+
+            </group>
+
+        </section>
+    </system>
+</config>

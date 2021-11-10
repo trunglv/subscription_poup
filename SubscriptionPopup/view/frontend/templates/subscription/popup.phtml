@@ -1,0 +1,35 @@
+
+<?php
+    if( $block->isDisplay() ):
+?>
+<div id="magenable_subscription_popup" style="display: none;" data-bind="scope:'magenable_subscription_popup'">
+<!-- ko template: getTemplate() --><!-- /ko -->
+
+</div>
+
+<script type="text/x-magento-init">
+{
+    
+    "#magenable_subscription_popup": {
+
+        "Magento_Ui/js/core/app": {
+
+            "components":{
+
+                "magenable_subscription_popup": 
+                {
+                    
+                    "component" : "Magenable_SubscriptionPopup/js/view/popup",
+                    
+                    "config" : <?php echo $block->getPopupJsConfig(); ?>
+                }
+                
+            }
+        }
+        
+
+    }
+}
+</script>
+
+<?php endif;?>
