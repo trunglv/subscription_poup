@@ -1,15 +1,15 @@
 # subscription_poup
 Magento2 - Simple Extension - Using Require-CSS and LESS Preproccessor 
 
-## 1.Use Require-CSS to load css code for specific component 
+## 1. Use Require-CSS to load CSS asynchromously for a specific UI component 
 
-##### I implement a popup as UI Component. In this component, I load CSS asynchromously from it. You can have a look here
-https://github.com/trunglv/subscription_poup/blob/main/SubscriptionPopup/view/frontend/web/js/view/popup.js#L43
+I implement a popup as UI Component. In this component, I load CSS asynchromously from it. You can have a look here https://github.com/trunglv/subscription_poup/blob/main/SubscriptionPopup/view/frontend/web/js/view/popup.js#L43
 
 Require-CSS can be got from here https://www.npmjs.com/package/require-css
 
-##### LESS Preprocessor
-###### Due to get some Stylesheet variables from Magento configuration, likes background-color, text-color to pass into a LESS file. I make a Less preprocessor(PHP code) to injected them.
+## 2. LESS Preprocessor - To inject/replace some code-lines/variables depends on Backend Configurations 
+
+###### Due to get some Stylesheet variables from Magento configuration (likes background-color, text-color) to pass into a LESS file. I make a Less preprocessor(PHP code) to injected them.
 See here : https://github.com/trunglv/subscription_poup/blob/main/SubscriptionPopup/Css/PreProcessor/Instruction/Variables.php#L32
 
 Define a new preproccessor from di.xml
