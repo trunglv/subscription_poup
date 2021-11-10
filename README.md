@@ -1,6 +1,6 @@
 # Magento2 - Simple Extension - Using Require-CSS and LESS Preproccessor to approach Headless architect for CSS and avoid CSS inlines.  
 
-#### Something about extension features: 
+#### A Short thing about extension features: 
 It's just a simple extension to show a subscription form as a popup. Some CSS variables will be got from Magento Backend Configuration.
 
 #### What I do to try approach Headless architect for CSS 
