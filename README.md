@@ -8,6 +8,10 @@ https://github.com/trunglv/subscription_poup/blob/main/SubscriptionPopup/view/fr
 
 Require-CSS can be got from here https://www.npmjs.com/package/require-css
 
+##### LESS Preprocessor
+###### Due to get some Stylesheet variables from Magento configuration, likes background-color, text-color to pass into a LESS file. I make a Less preprocessor(PHP code) to injected them.
+See here : https://github.com/trunglv/subscription_poup/blob/main/SubscriptionPopup/Css/PreProcessor/Instruction/Variables.php#L32
+
 
 
 ## Installation: 
