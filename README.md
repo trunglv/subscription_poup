@@ -11,7 +11,7 @@ I implement a popup as UI Component. In this component, I load CSS asynchromousl
 
 Require-CSS can be got from here https://www.npmjs.com/package/require-css
 
-##### How to import into Magento2 frontend
+##### How to import into Magento2 requirejs-configs
 ```
 var config = {
     map: {
