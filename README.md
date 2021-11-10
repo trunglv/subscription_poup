@@ -1,6 +1,15 @@
 # subscription_poup
 Magento2 - Simple Extension - Using Require-CSS and LESS Preproccessor 
 
+## Use Require-CSS to load css code for specific component 
+
+## I implemented a popup as UI Component. In this component, I load CSS asynchromously from it. You can have a look here
+https://github.com/trunglv/subscription_poup/blob/main/SubscriptionPopup/view/frontend/web/js/view/popup.js#L43
+
+
+
+
+
 ## Installation: 
 1. Create a folder app/code/Magenable.
 2. Download a source-code then copy a folder SubscriptionPopup into such below folder.
