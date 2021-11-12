@@ -19,8 +19,14 @@ class Config {
 
     const XML_CONFIG_DESIGN_POPUP_DELAY = 'magenable_subscriptionpoupup/general/popup_delay';
 
+    /**
+     * @var ScopeConfigInterface
+     */
+    protected $scopeConfig;
     
-
+    /**
+     * @param ScopeConfigInterface $scopeConfig
+     */
     public function __construct(
         ScopeConfigInterface $scopeConfig
     )
