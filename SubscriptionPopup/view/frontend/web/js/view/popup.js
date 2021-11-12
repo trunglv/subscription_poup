@@ -19,7 +19,7 @@
      /**
       * button close is clicked
       */
-     $("#magenable_subscription_popup ").unbind('click').bind('click', (e) => {e.preventDefault(); subscriptionPopup.hide()  } );
+     $("#magenable_subscription_popup .close").unbind('click').bind('click', (e) => {e.preventDefault(); subscriptionPopup.hide()  } );
      /**
       * clicked outer the popup
       */
@@ -75,34 +75,35 @@
                 me.errorMessages.push($t('Please type your email address.'));
                 return ;
             }
-            storage.post(
-                urlBuilder.build('newsletter_ajax/subscription/subscribe'),
-                JSON.stringify({
-                    email: this.email(),
-                    'form_key' : $.mage.cookies.get('form_key')
-                })
-            )
-            .done(
-                function (response) {
-                    if(response.success == true){
 
-                        if(response.error_messages)
-                            response.sucess_messages.forEach((item) => { me.sucessMessages.push(item) });
-                            
-                    }
-                    if(response.error == true){
+            $.ajax(
+                {
+                    method: 'POST',
+                    url: urlBuilder.build('newsletter_ajax/subscription/subscribe'),
+                    data : {
+                        email: this.email(),
+                        form_key : $.mage.cookies.get('form_key')
+                    },
+                    success : function(response){
+                        if(response.success == true){
+                            if(response.error_messages)
+                                response.sucess_messages.forEach((item) => { me.sucessMessages.push(item) });
 
-                        if(response.error_messages)    
-                            response.error_messages.forEach((item) => { me.errorMessages.push(item) });
-                        
-                        
+                        }
+                        if(response.error == true){
+
+                            if(response.error_messages)    
+                                response.error_messages.forEach((item) => { me.errorMessages.push(item) });
+
+                        }
+                        jQuery('body').trigger('processStop');
+                    },
+                    error : function(response){
+                        jQuery('body').trigger('processStop');
                     }
-                    jQuery('body').trigger('processStop');
                 }
-            ).fail(function(){
-                jQuery('body').trigger('processStop');
-            })
-            ;
+            );
+            
         },
         getSuccessMessages : function(){
             console.log(this);
